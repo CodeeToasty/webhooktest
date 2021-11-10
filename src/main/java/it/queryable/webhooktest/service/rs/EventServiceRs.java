@@ -64,18 +64,28 @@ public class EventServiceRs extends RsRepositoryServiceV3<Event, String> {
 	}
 
 	@POST
-	@Path("/test")
-	public void jsontest(String json){
+	@Path("/procedures")
+	public void procedures(String json){
 		JsonObject response = new JsonObject(json);
-		pretty(response);
+		System.out.println(response.getString("eventName"));
+		//pretty(response);
 	}
 
 
 	@POST
-	@Path("/test2")
-	public void jsontest2(String json){
+	@Path("/members")
+	public void members(String json){
 		JsonObject response = new JsonObject(json);
-		pretty(response);
+		System.out.println(response.getString("eventName"));
+		//pretty(response);
+	}
+
+	@POST
+	@Path("/others")
+	public void others(String json){
+		JsonObject response = new JsonObject(json);
+		System.out.println(response.getString("eventName"));
+		//pretty(response);
 	}
 
 	@Override
